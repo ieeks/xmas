@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vienna Christmas Markets 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#a3161f; --red-dark:#7a0f16; --green:#1f4d3a; --green-soft:#e6efe9;
+    --gold:#c99a2e; --gold-soft:#f6ecd2; --cream:#fdf8f0; --ink:#2a2420; --muted:#6b625a;
+    --card:#ffffff; --line:#eadfcd;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:"Source Sans 3",system-ui,sans-serif;font-size:17px;line-height:1.55}
+  a{color:var(--red)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 16px}
+
+  /* Hero */
+  header{background:linear-gradient(160deg,var(--red) 0%,var(--red-dark) 100%);color:#fff;position:relative;overflow:hidden;padding:56px 0 64px;text-align:center}
+  header::before,header::after{content:"✻  ❄  ✦  ❅  ✻  ❄  ✦  ❅  ✻  ❄  ✦  ❅  ✻  ❄";position:absolute;left:0;right:0;font-size:22px;letter-spacing:18px;color:rgba(255,255,255,.18);white-space:nowrap;overflow:hidden}
+  header::before{top:14px}
+  header::after{bottom:14px}
+  .eyebrow{font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--gold-soft)}
+  h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(34px,6vw,56px);line-height:1.1;margin:10px 0 12px}
+  header p{margin:0 auto;max-width:620px;color:#fbe9e9}
+  .garland{height:10px;background:repeating-linear-gradient(90deg,var(--green) 0 26px,var(--gold) 26px 34px)}
+
+  /* Key dates */
+  .dates{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:-34px auto 0;position:relative}
+  .date{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:12px;padding:16px;text-align:center;box-shadow:0 6px 18px rgba(80,40,20,.08)}
+  .date b{display:block;font-family:"Playfair Display",serif;font-size:26px;color:var(--red)}
+  .date span{font-size:15px;color:var(--muted)}
+
+  section{padding:40px 0 8px}
+  h2{font-family:"Playfair Display",Georgia,serif;font-size:clamp(26px,4vw,34px);color:var(--green);margin:0 0 6px;display:flex;align-items:center;gap:10px}
+  h2 .ic{font-size:.8em}
+  .lead{color:var(--muted);margin:0 0 20px}
+
+  /* Nearby cards */
+  .near{display:grid;gap:14px}
+  .ncard{display:grid;grid-template-columns:64px 1fr;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;align-items:start}
+  .num{width:64px;height:64px;border-radius:50%;background:var(--green);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+  .num b{font-family:"Playfair Display",serif;font-size:22px}
+  .num small{font-size:11px;opacity:.85;margin-top:3px}
+  .ncard h3{margin:0 0 4px;font-size:20px}
+  .meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:15px;color:var(--muted);margin-bottom:6px}
+  .ncard p{margin:4px 0 8px}
+  .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;vertical-align:middle;margin-left:6px}
+  .tag.new{background:var(--red);color:#fff}
+  .tag.back{background:var(--gold);color:#3a2a05}
+  .tag.late{background:var(--green-soft);color:var(--green)}
+  .btn{display:inline-block;font-weight:600;font-size:15px;text-decoration:none;background:var(--gold-soft);color:var(--red-dark);border:1px solid #e8d49f;border-radius:8px;padding:6px 12px}
+  .btn:hover{background:#f0dfb0}
+  .note{font-size:14px;color:var(--muted);font-style:italic}
+
+  /* New this year */
+  .newgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .nbox{background:var(--card);border-radius:14px;padding:20px;border:1px solid var(--line);border-left:6px solid var(--red)}
+  .nbox.gold{border-left-color:var(--gold)}
+  .nbox h3{margin:0 0 6px;font-size:20px}
+  .nbox p{margin:0}
+
+  /* Table */
+  .tablewrap{overflow-x:auto;border-radius:14px;border:1px solid var(--line);background:var(--card)}
+  table{width:100%;border-collapse:collapse;min-width:640px;font-size:15.5px}
+  th{background:var(--green);color:#fff;text-align:left;padding:12px 14px;font-weight:600}
+  td{padding:12px 14px;border-top:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#fffcf6}
+  td b{color:var(--ink)}
+  td small{color:var(--muted)}
+
+  /* After Xmas */
+  .after{display:flex;flex-wrap:wrap;gap:10px}
+  .pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:15.5px}
+  .pill b{color:var(--red)}
+
+  /* Tips */
+  .tips{display:grid;grid-template-columns:1fr 1fr;gap:14px;list-style:none;padding:0;margin:0}
+  .tips li{background:var(--green);color:#f2f7f4;border-radius:14px;padding:16px 18px}
+  .tips li b{color:var(--gold-soft);display:block;margin-bottom:2px}
+
+  footer{margin-top:44px;background:var(--green);color:#dfeae4;padding:28px 0;font-size:14.5px}
+  footer a{color:var(--gold-soft)}
+  footer p{margin:0 0 8px}
+
+  @media (max-width:700px){
+    .dates{grid-template-columns:1fr;margin-top:-28px}
+    .newgrid,.tips{grid-template-columns:1fr}
+    .ncard{grid-template-columns:52px 1fr;padding:16px}
+    .num{width:52px;height:52px}
+    .num b{font-size:18px}
+  }
+  @media print{
+    header{padding:28px 0}
+    header::before,header::after{display:none}
+    .btn{border:none;padding:0;background:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">A little guide from your host</div>
+    <h1>Vienna Christmas Markets 2026</h1>
+    <p>Opening dates, the markets closest to the apartment, this year's new spots and the markets most often recommended online.</p>
+  </div>
+</header>
+<div class="garland"></div>
+
+<div class="wrap">
+  <div class="dates">
+    <div class="date"><b>6 Nov</b><span>First markets open<br>(Stephansplatz, Schönbrunn)</span></div>
+    <div class="date"><b>13 Nov</b><span>Most big markets open,<br>incl. Rathausplatz</span></div>
+    <div class="date"><b>20 Nov</b><span>All markets running<br>(Belvedere, Maria-Theresien-Platz)</span></div>
+  </div>
+
+  <!-- NEAREST -->
+  <section>
+    <h2><span class="ic">🏠</span> Markets closest to the apartment</h2>
+    <p class="lead">Distances are straight-line from Aspangstraße 12 (1030). Tap "Directions" for the actual walking or public-transport route.</p>
+
+    <div class="near">
+      <article class="ncard">
+        <div class="num"><b>1.2</b><small>km</small></div>
+        <div>
+          <h3>K&amp;K Christmas Market, Belvedere <span class="tag late">open till 31 Dec</span></h3>
+          <div class="meta"><span>📅 20 Nov – 31 Dec</span><span>🕚 Mon–Fri 11–21 · Sat, Sun &amp; holidays 10–21 · 24 &amp; 31 Dec until 17:00</span></div>
+          <p>Imperial-themed market in the palace park with traditional music, crafts and food. The closest market to the apartment and the only one of the official city markets open until New Year's Eve.</p>
+          <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Aspangstra%C3%9Fe+12,+1030+Wien&destination=Oberes+Belvedere,+Prinz-Eugen-Stra%C3%9Fe+27,+1030+Wien">Directions ↗</a>
+          <p class="note">Some guides report the market area has moved within the park this year. Check on site.</p>
+        </div>
+      </article>
+
+      <article class="ncard">
+        <div class="num"><b>1.8</b><small>km</small></div>
+        <div>
+          <h3>Weihnachtszauber, Schwarzenbergplatz <span class="tag new">New 2026</span></h3>
+          <div class="meta"><span>📅 13 Nov – 26 Dec</span><span>🕚 Mon–Fri 11–21 · Sat &amp; Sun 10–21 · 24–26 Dec 11–16</span></div>
+          <p>Brand-new market, running for the first time this year, set around the Hochstrahlbrunnen fountain. Crafts, Austrian food, a stage programme and live music.</p>
+          <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Aspangstra%C3%9Fe+12,+1030+Wien&destination=Hochstrahlbrunnen,+Schwarzenbergplatz,+Wien">Directions ↗</a>
+        </div>
+      </article>
+
+      <article class="ncard">
+        <div class="num"><b>2.1</b><small>km</small></div>
+        <div>
+          <h3>Art Advent, Karlsplatz</h3>
+          <div class="meta"><span>📅 13 Nov – 23 Dec</span><span>🕚 Daily 12–20 · food &amp; drinks until 21</span></div>
+          <p>Arts-and-crafts market in front of the Karlskirche. All food and drink stalls are certified organic. Good for families: straw play area and children's programme.</p>
+          <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Aspangstra%C3%9Fe+12,+1030+Wien&destination=Karlskirche,+Karlsplatz,+1040+Wien">Directions ↗</a>
+        </div>
+      </article>
+
+      <article class="ncard">
+        <div class="num"><b>2.7</b><small>km</small></div>
+        <div>
+          <h3>Christmas Market, Stephansplatz</h3>
+          <div class="meta"><span>📅 6 Nov – 26 Dec</span><span>🕚 Daily 11–21 · 24 Dec 11–16 · 25 &amp; 26 Dec 11–19</span></div>
+          <p>Small market directly at St. Stephen's Cathedral, focused on Austrian products. Easy to combine with a walk through the old town.</p>
+          <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Aspangstra%C3%9Fe+12,+1030+Wien&destination=Stephansplatz,+1010+Wien">Directions ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- NEW -->
+  <section>
+    <h2><span class="ic">✨</span> New this year</h2>
+    <p class="lead">The city approved 15 official Christmas markets for 2026.</p>
+    <div class="newgrid">
+      <div class="nbox">
+        <h3>Schwarzenbergplatz <span class="tag new">First edition</span></h3>
+        <p>A completely new market around the Hochstrahlbrunnen, 13 Nov – 26 Dec. Only about 1.8 km from the apartment.</p>
+      </div>
+      <div class="nbox gold">
+        <h3>Maria-Theresien-Platz <span class="tag back">Back</span></h3>
+        <p>The Christmas village between the Art History and Natural History Museums returns after a break in 2025. 20 Nov – 26 Dec.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP -->
+  <section>
+    <h2><span class="ic">⭐</span> Most recommended markets</h2>
+    <p class="lead">The markets that come up again and again in Vienna travel guides and tourism sites. Not an official ranking.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Market</th><th>Dates 2026</th><th>Opening hours</th><th>Why go</th></tr></thead>
+        <tbody>
+          <tr><td><b>Christkindlmarkt, Rathausplatz</b><br><small>1010 · ≈ 3.7 km</small></td><td>13 Nov – 26 Dec</td><td>Daily 10–22<br><small>24 Dec until 18:30</small></td><td>The classic, in front of City Hall. Free choir performances on Fri, Sat and Sun.</td></tr>
+          <tr><td><b>Schönbrunn Palace</b><br><small>1130 · ≈ 6 km</small></td><td>6 Nov – 6 Jan 2027</td><td>Daily 10–21 until 23 Dec<br><small>24 Dec until 16 · 25 Dec–6 Jan 10–19</small></td><td>Palace backdrop, biggest food area of all markets. Open into January.</td></tr>
+          <tr><td><b>Spittelberg</b><br><small>1070 · ≈ 3.5 km</small></td><td>13 Nov – 23 Dec</td><td>Mon–Fri 14–21:30<br><small>Sat &amp; Sun 11–21:30</small></td><td>Stalls spread through narrow Biedermeier lanes. Most stalls of any market (122).</td></tr>
+          <tr><td><b>Belvedere (K&amp;K)</b><br><small>1030 · ≈ 1.2 km</small></td><td>20 Nov – 31 Dec</td><td>Mon–Fri 11–21<br><small>Sat &amp; Sun 10–21</small></td><td>Palace setting, imperial theme. Closest to the apartment.</td></tr>
+          <tr><td><b>Art Advent, Karlsplatz</b><br><small>1040 · ≈ 2.1 km</small></td><td>13 Nov – 23 Dec</td><td>Daily 12–20</td><td>Handmade crafts, fully organic food, Karlskirche backdrop.</td></tr>
+          <tr><td><b>Altwiener Christkindlmarkt, Freyung</b><br><small>1010 · ≈ 3.4 km</small></td><td>14 Nov – 23 Dec</td><td>Daily 10–21</td><td>Traditional old-Viennese market. A market has stood on the Freyung since the 18th century.</td></tr>
+          <tr><td><b>Am Hof</b><br><small>1010 · ≈ 3.2 km</small></td><td>13 Nov – 23 Dec</td><td>Mon–Thu 11–21<br><small>Fri–Sun 10–21</small></td><td>Crafts and gifts in the old town, second-largest food offer.</td></tr>
+          <tr><td><b>Maria-Theresien-Platz</b><br><small>1010 · ≈ 3.1 km</small></td><td>20 Nov – 26 Dec</td><td>Mon–Fri 11–21<br><small>Sat &amp; Sun 10–21</small></td><td>Between the two big museums on the Ring. Back in 2026.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- AFTER XMAS -->
+  <section>
+    <h2><span class="ic">🎁</span> Staying over Christmas?</h2>
+    <p class="lead">Many markets close on 23 or 24 December. These stay open longer:</p>
+    <div class="after">
+      <span class="pill">Rathausplatz · <b>26 Dec</b></span>
+      <span class="pill">Stephansplatz · <b>26 Dec</b></span>
+      <span class="pill">Schwarzenbergplatz · <b>26 Dec</b></span>
+      <span class="pill">Maria-Theresien-Platz · <b>26 Dec</b></span>
+      <span class="pill">Belvedere · <b>31 Dec</b></span>
+      <span class="pill">Schönbrunn · <b>6 Jan</b></span>
+      <span class="pill">Riesenradplatz · <b>6 Jan</b></span>
+    </div>
+  </section>
+
+  <!-- TIPS -->
+  <section>
+    <h2><span class="ic">🎄</span> Good to know</h2>
+    <ul class="tips">
+      <li><b>Entry is free</b>You only pay for what you eat, drink or buy.</li>
+      <li><b>Mug deposit</b>Punsch and Glühwein come in a mug with a deposit. Return it to get the deposit back, or keep it as a souvenir.</li>
+      <li><b>Check 24 December</b>Most markets close early on Christmas Eve or are already closed. Check the times above before you go.</li>
+      <li><b>Two in one walk</b>Schwarzenbergplatz and Karlsplatz are right next to each other and on the way to the city centre.</li>
+    </ul>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Dates and hours are taken from the City of Vienna market office announcement and organiser and tourism websites. Organisers can still change times, especially around the holidays, so please check before you go.</p>
+    <p>More info: <a href="https://www.wien.info" target="_blank" rel="noopener">wien.info</a> · <a href="https://www.altwiener-markt.at" target="_blank" rel="noopener">altwiener-markt.at</a> · <a href="https://www.wintermarkt.at" target="_blank" rel="noopener">wintermarkt.at</a> · <a href="http://www.artadvent.at/" target="_blank" rel="noopener">artadvent.at</a></p>
+    <p>Enjoy the season! 🎅</p>
+  </div>
+</footer>
+
+</body>
+</html>
